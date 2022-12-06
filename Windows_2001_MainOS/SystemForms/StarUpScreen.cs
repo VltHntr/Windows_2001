@@ -20,7 +20,7 @@ namespace Windows_2001_MainOS.SystemForms
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            progressBar1.Value = progressBar1.Value + 1;
+            progressBar1.Value = progressBar1.Value + 6;
 
             if (progressBar1.Value == 100)
             {

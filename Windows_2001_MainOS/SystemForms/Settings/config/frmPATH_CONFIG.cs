@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Security.Permissions;
 
 namespace Windows_2001_MainOS.SystemForms.Settings.config
 {
@@ -72,6 +74,21 @@ namespace Windows_2001_MainOS.SystemForms.Settings.config
             if (String.IsNullOrEmpty(txtPath.Text) && chboxAlsTest.Checked == false)
             {
                 MessageBox.Show("Bitte einen PATH auswählen!\nWenn kein PATH angegeben werden soll bitte die CheckBox auswählen.");
+            }
+
+            else
+            {
+                string dirPath = $"{txtPath.Text}\\Windows_2001";
+                Directory.CreateDirectory(dirPath);
+
+                Directory.CreateDirectory($"{dirPath}\\Editor");
+                Directory.CreateDirectory($"{dirPath}\\sys");
+                Directory.CreateDirectory($"{dirPath}\\win");
+
+                Properties.Settings.Default.OS_path = dirPath;
+                Properties.Settings.Default.pathExist = true;
+                Properties.Settings.Default.Save();
+                this.Close();
             }
         }
     }

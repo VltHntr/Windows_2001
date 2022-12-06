@@ -20,7 +20,7 @@ namespace Windows_2001_MainOS.SystemForms
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            progressBar1.Value = progressBar1.Value + 6;
+            progressBar1.Value = progressBar1.Value + 5;
 
             if (progressBar1.Value == 100)
             {
@@ -28,7 +28,7 @@ namespace Windows_2001_MainOS.SystemForms
 
                 if (Properties.Settings.Default.pathExist == false)
                 {
-                    MessageBox.Show("No PATH!");
+                    //MessageBox.Show("No PATH!");
                     frmPATH_CONFIG pATH_CONFIG = new frmPATH_CONFIG();
                     pATH_CONFIG.ShowDialog();
                 }

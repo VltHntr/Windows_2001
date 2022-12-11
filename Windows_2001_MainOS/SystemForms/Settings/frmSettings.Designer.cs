@@ -34,12 +34,12 @@
             this.tabPageAllgemein = new System.Windows.Forms.TabPage();
             this.tabPageConfig = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.cmdExecute = new System.Windows.Forms.Button();
+            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPageConfig.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -100,25 +100,6 @@
             this.panel1.Size = new System.Drawing.Size(786, 416);
             this.panel1.TabIndex = 0;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(14, 13);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(183, 32);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Windows 2001";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(185, 45);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(159, 15);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Konfigurations Einstellungen";
-            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.cmdExecute);
@@ -131,16 +112,16 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "System Zurücksetzen";
             // 
-            // label3
+            // cmdExecute
             // 
-            this.label3.BackColor = System.Drawing.Color.Firebrick;
-            this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label3.Location = new System.Drawing.Point(6, 28);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(294, 30);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Dabei werden alle Datein, unwiederruflich, gelöscht!";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.cmdExecute.Enabled = false;
+            this.cmdExecute.Location = new System.Drawing.Point(181, 132);
+            this.cmdExecute.Name = "cmdExecute";
+            this.cmdExecute.Size = new System.Drawing.Size(119, 23);
+            this.cmdExecute.TabIndex = 2;
+            this.cmdExecute.Text = "Zurücksetzen";
+            this.cmdExecute.UseVisualStyleBackColor = true;
+            this.cmdExecute.Click += new System.EventHandler(this.cmdExecute_Click);
             // 
             // checkedListBox1
             // 
@@ -152,17 +133,37 @@
             this.checkedListBox1.Name = "checkedListBox1";
             this.checkedListBox1.Size = new System.Drawing.Size(169, 94);
             this.checkedListBox1.TabIndex = 1;
+            this.checkedListBox1.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.checkedListBox1_ItemCheck);
             // 
-            // cmdExecute
+            // label3
             // 
-            this.cmdExecute.Enabled = false;
-            this.cmdExecute.Location = new System.Drawing.Point(181, 132);
-            this.cmdExecute.Name = "cmdExecute";
-            this.cmdExecute.Size = new System.Drawing.Size(119, 23);
-            this.cmdExecute.TabIndex = 2;
-            this.cmdExecute.Text = "Zurücksetzen";
-            this.cmdExecute.UseVisualStyleBackColor = true;
-            this.cmdExecute.Click += new System.EventHandler(this.cmdExecute_Click);
+            this.label3.BackColor = System.Drawing.Color.Firebrick;
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label3.Location = new System.Drawing.Point(6, 28);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(294, 30);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Dabei werden alle Datein, unwiederruflich, gelöscht!";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(185, 45);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(159, 15);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Konfigurations Einstellungen";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(14, 13);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(183, 32);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Windows 2001";
             // 
             // frmSettings
             // 

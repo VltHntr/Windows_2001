@@ -16,6 +16,9 @@ namespace Windows_2001_MainOS
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            SystemForms.FrmLogInScreen logInScreen = new SystemForms.FrmLogInScreen();
+            logInScreen.ShowDialog();
+
             frmWelcome newWelcome = new frmWelcome();
             newWelcome.MdiParent = this;
 

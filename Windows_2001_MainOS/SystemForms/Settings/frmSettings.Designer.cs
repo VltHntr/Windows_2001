@@ -28,45 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Sprache");
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Allgemein", new System.Windows.Forms.TreeNode[] {
-            treeNode1});
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.treeView1 = new System.Windows.Forms.TreeView();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripMenuItemEinstellungen = new System.Windows.Forms.ToolStripMenuItem();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
-            this.splitContainer1.Panel1.SuspendLayout();
-            this.splitContainer1.SuspendLayout();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPageAllgemein = new System.Windows.Forms.TabPage();
+            this.tabPageConfig = new System.Windows.Forms.TabPage();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.cmdExecute = new System.Windows.Forms.Button();
+            this.tabControl1.SuspendLayout();
+            this.tabPageConfig.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // splitContainer1
-            // 
-            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer1.Name = "splitContainer1";
-            // 
-            // splitContainer1.Panel1
-            // 
-            this.splitContainer1.Panel1.Controls.Add(this.treeView1);
-            this.splitContainer1.Size = new System.Drawing.Size(800, 450);
-            this.splitContainer1.SplitterDistance = 184;
-            this.splitContainer1.TabIndex = 0;
-            // 
-            // treeView1
-            // 
-            this.treeView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.treeView1.Location = new System.Drawing.Point(0, 0);
-            this.treeView1.Name = "treeView1";
-            treeNode1.Name = "Node0.1";
-            treeNode1.Text = "Sprache";
-            treeNode2.Name = "Node0";
-            treeNode2.Text = "Allgemein";
-            this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode2});
-            this.treeView1.Size = new System.Drawing.Size(184, 450);
-            this.treeView1.TabIndex = 0;
-            this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
             // 
             // toolStripSeparator1
             // 
@@ -79,26 +57,142 @@
             this.toolStripMenuItemEinstellungen.Size = new System.Drawing.Size(180, 22);
             this.toolStripMenuItemEinstellungen.Text = "Einstellungen";
             // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPageAllgemein);
+            this.tabControl1.Controls.Add(this.tabPageConfig);
+            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl1.Location = new System.Drawing.Point(0, 0);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(800, 450);
+            this.tabControl1.TabIndex = 0;
+            // 
+            // tabPageAllgemein
+            // 
+            this.tabPageAllgemein.Location = new System.Drawing.Point(4, 24);
+            this.tabPageAllgemein.Name = "tabPageAllgemein";
+            this.tabPageAllgemein.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageAllgemein.Size = new System.Drawing.Size(792, 422);
+            this.tabPageAllgemein.TabIndex = 0;
+            this.tabPageAllgemein.Text = "Allgemein";
+            this.tabPageAllgemein.UseVisualStyleBackColor = true;
+            // 
+            // tabPageConfig
+            // 
+            this.tabPageConfig.Controls.Add(this.panel1);
+            this.tabPageConfig.Location = new System.Drawing.Point(4, 24);
+            this.tabPageConfig.Name = "tabPageConfig";
+            this.tabPageConfig.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageConfig.Size = new System.Drawing.Size(792, 422);
+            this.tabPageConfig.TabIndex = 1;
+            this.tabPageConfig.Text = "Windows 2001 Config";
+            this.tabPageConfig.UseVisualStyleBackColor = true;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.groupBox1);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(786, 416);
+            this.panel1.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(14, 13);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(183, 32);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Windows 2001";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(185, 45);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(159, 15);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Konfigurations Einstellungen";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.cmdExecute);
+            this.groupBox1.Controls.Add(this.checkedListBox1);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Location = new System.Drawing.Point(14, 91);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(306, 173);
+            this.groupBox1.TabIndex = 2;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "System Zurücksetzen";
+            // 
+            // label3
+            // 
+            this.label3.BackColor = System.Drawing.Color.Firebrick;
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label3.Location = new System.Drawing.Point(6, 28);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(294, 30);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Dabei werden alle Datein, unwiederruflich, gelöscht!";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // checkedListBox1
+            // 
+            this.checkedListBox1.FormattingEnabled = true;
+            this.checkedListBox1.Items.AddRange(new object[] {
+            "Back-Up erstellt",
+            "Zustimmen des Löschens"});
+            this.checkedListBox1.Location = new System.Drawing.Point(6, 61);
+            this.checkedListBox1.Name = "checkedListBox1";
+            this.checkedListBox1.Size = new System.Drawing.Size(169, 94);
+            this.checkedListBox1.TabIndex = 1;
+            // 
+            // cmdExecute
+            // 
+            this.cmdExecute.Enabled = false;
+            this.cmdExecute.Location = new System.Drawing.Point(181, 132);
+            this.cmdExecute.Name = "cmdExecute";
+            this.cmdExecute.Size = new System.Drawing.Size(119, 23);
+            this.cmdExecute.TabIndex = 2;
+            this.cmdExecute.Text = "Zurücksetzen";
+            this.cmdExecute.UseVisualStyleBackColor = true;
+            this.cmdExecute.Click += new System.EventHandler(this.cmdExecute_Click);
+            // 
             // frmSettings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.splitContainer1);
+            this.Controls.Add(this.tabControl1);
             this.Name = "frmSettings";
             this.Text = "Einstellungen";
-            this.splitContainer1.Panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
-            this.splitContainer1.ResumeLayout(false);
+            this.tabControl1.ResumeLayout(false);
+            this.tabPageConfig.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private SplitContainer splitContainer1;
-        private TreeView treeView1;
         private ToolStripSeparator toolStripSeparator1;
         private ToolStripMenuItem toolStripMenuItemEinstellungen;
+        private TabControl tabControl1;
+        private TabPage tabPageAllgemein;
+        private TabPage tabPageConfig;
+        private Panel panel1;
+        private GroupBox groupBox1;
+        private Button cmdExecute;
+        private CheckedListBox checkedListBox1;
+        private Label label3;
+        private Label label2;
+        private Label label1;
     }
 }
